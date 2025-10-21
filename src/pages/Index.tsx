@@ -74,9 +74,12 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-white border-b shadow-sm">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Icon name="Activity" className="text-primary" size={32} />
-              <span className="text-xl font-bold text-foreground">МедЦентр Ортопедия</span>
+            <div className="flex items-center space-x-3">
+              <img src="https://cdn.poehali.dev/files/457fb5c5-825d-420d-8004-59eb112e128e.jpg" alt="Анатомия Здоровья" className="h-12 w-auto" />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-primary">АНАТОМИЯ</span>
+                <span className="text-sm text-muted-foreground tracking-wider">ЗДОРОВЬЯ</span>
+              </div>
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <button onClick={() => scrollToSection('home')} className="text-sm font-medium hover:text-primary transition-colors">
@@ -461,9 +464,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Icon name="Activity" className="text-primary" size={32} />
-                <span className="text-xl font-bold">МедЦентр Ортопедия</span>
+              <div className="flex items-center space-x-3 mb-4">
+                <img src="https://cdn.poehali.dev/files/457fb5c5-825d-420d-8004-59eb112e128e.jpg" alt="Анатомия Здоровья" className="h-12 w-auto" />
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold">АНАТОМИЯ</span>
+                  <span className="text-sm tracking-wider opacity-80">ЗДОРОВЬЯ</span>
+                </div>
               </div>
               <p className="text-background/80">
                 Современная клиника травматологии и ортопедии с профессиональным подходом к каждому пациенту
