@@ -138,10 +138,10 @@ const Index = () => {
       </header>
 
       <main>
-        <section id="home" className="relative bg-gradient-to-br from-primary/5 to-secondary/5 py-20">
+        <section id="home" className="relative bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/5 py-20 bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6 animate-fade-in">
+              <div className="space-y-6 animate-slide-up">
                 <h1 className="text-5xl font-bold text-foreground leading-tight">
                   Клиника травматологии и ортопедии
                 </h1>
@@ -214,9 +214,9 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="services" className="py-20 bg-white">
+        <section id="services" className="py-20 bg-gradient-to-b from-white to-secondary/5">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
+            <div className="text-center mb-12 animate-fade-in">
               <h2 className="text-4xl font-bold text-foreground mb-4">Наши услуги</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Современные методы лечения заболеваний опорно-двигательного аппарата
@@ -224,10 +224,10 @@ const Index = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-2 hover:border-primary/20">
+                <Card key={index} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50 hover:-translate-y-2 animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon name={service.icon as any} className="text-primary" size={24} />
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 animate-pulse-slow">
+                      <Icon name={service.icon as any} className="text-white" size={24} />
                     </div>
                     <CardTitle className="text-lg">{service.title}</CardTitle>
                   </CardHeader>
@@ -260,7 +260,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="specialists" className="py-20 bg-muted/30">
+        <section id="specialists" className="py-20 bg-gradient-to-b from-secondary/5 to-primary/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-foreground mb-4">Наши специалисты</h2>
@@ -270,7 +270,7 @@ const Index = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {specialists.map((specialist, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{animationDelay: `${index * 0.15}s`}}>
                   <img 
                     src={specialist.image} 
                     alt={specialist.name} 
@@ -313,7 +313,7 @@ const Index = () => {
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
-                          <Icon name="Check" className="text-secondary" size={20} />
+                          <Icon name="Check" className="text-white" size={20} />
                         </div>
                         <CardTitle>Индивидуальный подход</CardTitle>
                       </div>
@@ -324,11 +324,11 @@ const Index = () => {
                       </CardDescription>
                     </CardContent>
                   </Card>
-                  <Card>
+                  <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                     <CardHeader>
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
-                          <Icon name="Shield" className="text-secondary" size={20} />
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
+                          <Icon name="Shield" className="text-white" size={20} />
                         </div>
                         <CardTitle>Безопасность</CardTitle>
                       </div>
@@ -345,7 +345,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="documents" className="py-20 bg-muted/30">
+        <section id="documents" className="py-20 bg-gradient-to-b from-white to-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-foreground mb-8 text-center">Документы и лицензии</h2>
@@ -354,11 +354,11 @@ const Index = () => {
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 {documents.map((doc, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                  <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                     <CardHeader>
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <Icon name="FileText" className="text-primary" size={24} />
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
+                          <Icon name="FileText" className="text-white" size={24} />
                         </div>
                         <div>
                           <CardTitle className="text-lg mb-1">{doc.name}</CardTitle>
